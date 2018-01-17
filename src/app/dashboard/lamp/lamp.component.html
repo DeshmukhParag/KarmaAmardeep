@@ -1,0 +1,108 @@
+<section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box">
+          <div class="box-header with-border">
+            <h3 class="box-title">Lamp</h3>             
+            <!-- <button type="button" class="btn btn-warning" style="float:right;"  data-toggle="modal" data-target="#modal-add">
+              <i class="fa fa-plus"></i> Add Lamp</button> -->
+          </div>
+  
+          <div class="box-body table-responsive">
+            <table class="table table-bordered">
+              <tbody>
+                <tr style="background-color: rgba(210, 210, 210, 0.8);">
+                  <th>Lamp Price</th>
+                  <th>Modified Date</th>                 
+                  <th>Action</th>                
+                </tr>
+                <tr *ngFor="let lamp of lamps">
+                  <td>{{lamp.price}}</td>                 
+                  <td>{{lamp.modifieddate | date:'dd/MM/yyyy, hh:mm:ss'}}</td>  
+                  <td> 
+                      <button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#modal-update">
+                        <i class="fa fa-pencil-square-o"></i>  Update Price</button>
+                        <button class="btn btn-xs btn-default" [routerLink]="['/dashboard/lamp-edit', lamp.id]">
+                          <i class="fa fa-pencil"></i>
+                      </button>
+                </td>            
+                </tr>              
+              </tbody>
+            </table>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </section>    
+
+
+  <!---- Add Lamp Popup -->
+<!-- <div class="modal fade" id="modal-add">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">               
+                  <h1>Add Lamp</h1>                  
+            </div> 
+            <form #lamp ="ngForm" novalidate (ngSubmit)="add(lamp)">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="school-Name"><b>Price</b></label>
+                    <div class="col-md-4">                     
+                      <input id="price" type="text" required name="price" class="form-control" placeholder="Price"
+								 tmFocus ngModel>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="col-md-4 control-label" for="submit"></label>
+                      <div class="col-md-4">              
+                        <button type="submit" class="btn btn-warning" >Update</button>
+                      </div>
+                    </div>
+            </div> 
+            <br />
+            
+            </form>
+        </div>
+    </div>
+</div> -->
+<!-- End Add Lamp Popup --> 
+
+
+  <!---- Update Popup -->
+  <div class="modal fade" id="modal-update">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">                 
+                    <h1> Update Lamp</h1>                    
+              </div> 
+              <form #lamp ="ngForm" novalidate (ngSubmit)="UpdateLamp(lamp)">
+              <div class="modal-body">
+                 <div class="form-group">                      
+                    <div class="col-md-4">
+                    <input id="id" type="hidden" required name="id"  class="form-control" [ngModel]="detail.id" tmFocus>
+                    </div>
+                  </div>          
+
+                  <div class="form-group">
+                      <label class="col-md-4 control-label" for="school-Name"><b>Price</b></label>
+                      <div class="col-md-4">
+                        <input id="price" type="text" required name="price" class="form-control" placeholder="Price" [(ngModel)]="detail.price">      
+                      </div>
+                    </div>
+              </div> 
+
+              <div class="form-group">
+                  <label class="col-md-4 control-label" for="submit"></label>
+                  <div class="col-md-4">              
+                    <button type="submit" class="btn btn-warning" >Update Price</button>
+                  </div>
+                </div>
+              <br />
+  
+              
+              </form>
+          </div>
+      </div>
+  </div>
+  <!-- End Update Popup -->

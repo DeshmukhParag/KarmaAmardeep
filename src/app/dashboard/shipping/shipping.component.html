@@ -1,0 +1,128 @@
+<section class="content">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="col-sm-1"></div>
+      <div class="col-lg-10 well" style="margin-top: 31px;">
+        <form #shipping="ngForm" novalidate (ngSubmit)="addShipping(shipping)" class="form-horizontal">
+          <fieldset>
+            <legend style="text-align:center">ShippingRegistration </legend>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Shipping Name</label>
+              <div class="col-md-4">
+                <input id="shippingName" type="text" required name="shippingName" class="form-control" placeholder="Shipping Name " #shippingNameRef="ngModel"
+                  ngModel>
+                <div *ngIf="shippingNameRef.errors && (shippingNameRef.dirty || shippingNameRef.touched)" class="text-danger">
+                  <div [hidden]="!shippingNameRef.errors.required">Shipping Name is required.</div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="mobileNo">Mobile Number</label>
+
+              <div class="col-md-4">
+                <input id="mobileNo" type="text" required name="mobileNo" class="form-control" placeholder="Mobile Number" tmFocus ngModel
+                  #mobileNoRef="ngModel" pattern="[0-9]*" minlength="10" maxlength="10">
+                <div *ngIf="mobileNoRef.errors && (mobileNoRef.dirty || mobileNoRef.touched)" class="text-danger">
+                  <div [hidden]="!mobileNoRef.errors.required"> Mobile Number is required.</div>
+                  <div [hidden]="!mobileNoRef.hasError('minlength')">Mobile should be 10digit</div>
+                  <div [hidden]="!mobileNoRef.hasError('pattern')">Mobile Number should be only numbers</div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="email">Email</label>
+              <div class="col-md-4">
+                <input id="email" type="text" required name="email" validateEmail class="form-control" placeholder="Email" ngModel #email="ngModel">
+                <div [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Please enter a valid email</div>
+                <div *ngIf="email.errors && (email.dirty ||email.touched)" class="text-danger">
+                  <div [hidden]="!email.errors.required">Email is Required</div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="address">Address</label>
+              <div class="col-md-4">
+                <textarea id="address" type="text" required name="address" class="form-control" placeholder="Student Address" #addressRef="ngModel"
+                  ngModel> </textarea>
+                <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)" class="text-danger">
+                  <div [hidden]="!addressRef.errors.required">Address is required.</div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="taluka">Taluka</label>
+              <div class="col-md-4">
+                <input id="taluka" type="text" required name="taluka" class="form-control" placeholder="Taluka" #talukaRef="ngModel" ngModel>
+                <div *ngIf="talukaRef.errors && (talukaRef.dirty || talukaRef.touched)" class="text-danger">
+                  <div [hidden]="!talukaRef.errors.required">Taluka is required.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="city">District</label>
+              <div class="col-md-4">
+                <input id="district" type="text" required name="district" class="form-control" placeholder="District" #districtRef="ngModel"
+                  ngModel>
+                <div *ngIf="districtRef.errors && (districtRef.dirty || districtRef.touched)" class="text-danger">
+                  <div [hidden]="!districtRef.errors.required">District is required.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="state">State</label>
+              <div class="col-md-4">
+                <input id="state" type="text" required name="state" class="form-control" placeholder="State" #stateRef="ngModel" ngModel>
+                <div *ngIf="stateRef.errors && (stateRef.dirty || stateRef.touched)" class="text-danger">
+                  <div [hidden]="!stateRef.errors.required">State is required.</div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="pincode">Pincode</label>
+              <div class="col-md-4">
+                <input id="pincode" type="text" required name="pincode" class="form-control input-md" placeholder="pincode" tmFocus ngModel
+                  #PincodeRef="ngModel">
+                <div *ngIf="PincodeRef.errors && (PincodeRef.dirty ||PincodeRef.touched)" class="text-danger">
+                  <div [hidden]="!PincodeRef.errors.required">Pincode is required.</div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="submit"></label>
+              <div class="col-md-4">
+                <button type="submit" class="btn btn-warning" [disabled]="shipping.invalid || isRequesting">Register</button>
+            
+              </div>
+            </div>
+
+            <div *ngIf="errors" class="alert alert-danger" role="alert">
+              <strong>Oops!</strong> {{errors}}
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>

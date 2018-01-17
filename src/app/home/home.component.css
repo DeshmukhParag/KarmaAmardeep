@@ -1,0 +1,47 @@
+section.about-us .col-md-3 .fa {
+    font-size: 25px;
+    color: #fff;
+    margin: 0 auto;
+    height: 100px !important;
+    width: 100px !important;
+}
+.helps .item-inner {
+    padding: 39px 12px 38px 6px;
+    height: 349px!important;
+}
+	
+	#causes   .fn-donate-button {
+     background-color: #fff!important;
+    border: 2px solid #f39c12;
+    color: #f39c12;
+    display: inline-block;
+    padding: 6px 21px!important;
+    text-transform: uppercase;
+    transition: all 0.4s linear 0s;
+    font-weight: 397;
+    font-size: 13px;
+}
+#causes  .fn-donate-button:hover {
+ background-color: #f31a12!important;
+  
+	}
+		.hidden2{
+		display:none;}
+        .scrolloff {
+            pointer-events: none;
+        }
+		 
+
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.blink{
+	text-decoration: blink!important;
+	-webkit-animation-name: blinker!important;
+	-webkit-animation-duration: 0.6s!important;
+	-webkit-animation-iteration-count:infinite!important;
+	-webkit-animation-timing-function:ease-in-out!important;
+	-webkit-animation-direction: alternate!important;
+}
+		

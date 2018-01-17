@@ -1,0 +1,68 @@
+﻿<!-- HEADER START -->
+<div id="navbar-main">
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="index.html"></a>
+        <img src="../../assets/images/logo.png" style="height: 70px;" />
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <ul *ngIf="status" class="nav navbar-nav">
+            <li> <a href="#" class="smoothScroll">Home</a></li>
+            <li> <a href="#banner" class="smoothScroll">About Us</a></li>
+            <li> <a href="#causes" class="smoothScroll">Shining Stars </a></li>
+            <li> <a href="#fn-success" class="smoothScroll">Impact</a></li>
+           
+            <li> <a href="#whatyou" class="smoothScroll">What You Get</a></li>
+            <li> <a href="#contact" class="smoothScroll">Contact Us</a></li>
+                 
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" style=" background-color: rgba(231, 231, 231, 0)!important;" data-toggle="dropdown" aria-expanded="false">
+                      {{UserFullName}} <i class="fa fa-caret-down"></i>
+                  </a>
+              <ul class="dropdown-menu dropdown-user">
+
+                <li><a routerLink="/dashboard/home"><i class="fa fa-user fa-fw"></i> User Profile</a> </li>
+                <li><a href="#" (click)="logout()"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                </li>
+              </ul>
+
+            </li>
+
+
+          </ul>
+          <ul *ngIf="!status" class="nav navbar-nav">
+          
+            <li> <a href="#" class="smoothScroll">Home</a></li>
+            <li> <a href="#banner" class="smoothScroll">About Us</a></li>
+            <li> <a href="#causes" class="smoothScroll">Shining Stars </a></li>
+            <li> <a href="#fn-success" class="smoothScroll">Impact</a></li>
+           
+            <li> <a href="#whatyou" class="smoothScroll">What You Get</a></li>
+            <li> <a href="#contact" class="smoothScroll">Contact Us</a></li>
+           
+          
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/account/registration">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
+            </li>
+          </ul>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / END HEADER -->
+
+

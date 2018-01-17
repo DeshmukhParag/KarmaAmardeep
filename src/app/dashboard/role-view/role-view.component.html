@@ -1,0 +1,35 @@
+<section class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box">
+              <div class="box-header with-border">
+                <h3 class="box-title">Roles</h3>
+                <!-- <button style="float:right" type="button" class="btn btn-warning btn-xs" routerLink="/dashboard/role"><i class="fa fa-plus"></i> Add New</button> -->
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body table-responsive">
+                <table class="table table-bordered ">
+                  <tbody><tr style="background-color: rgba(210, 210, 210, 0.8);">
+                        <th> Role Name </th>
+                        <th> Description </th> 
+                        <th>Action</th>
+                  </tr>
+                  <tr *ngFor="let role of roles">
+                        <td>{{role.RoleName}}</td>
+                        <td>{{role.Description}}</td>
+                        <td> <button class="btn btn-xs btn-default" data-original-title="Edit Row" onclick="jQuery('#jqgrid').editRow('1');"><i class="fa fa-pencil"></i></button>
+                          <button class="btn btn-xs btn-default" data-original-title="Save Row" onclick="jQuery('#jqgrid').saveRow('1');"><i class="fa fa-save"></i></button>
+                         </td>
+                      </tr>
+                </tbody></table>
+              </div>
+              
+            </div>
+            <!-- /.box -->
+
+
+  </div>
+</div>
+  </section>
+
+ 

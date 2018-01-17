@@ -1,0 +1,119 @@
+<app-header>
+</app-header>
+<section class="container" style="margin-top:150px;margin-bottom:70px">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="col-sm-1"></div>
+      <div class="col-lg-10 well" style="margin-top: 31px;">
+        <form #school="ngForm" novalidate (ngSubmit)="addSchool(school)" class="form-horizontal">
+          <fieldset>
+            <legend style="text-align:center">School Registration </legend>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="school-Name">School Name</label>
+              <div class="col-md-4">
+                <input id="schoolName" type="text" required name="schoolName" class="form-control" placeholder="School Name" ngModel>
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="telPhoneNo">Telephone Number </label>
+              <div class="col-md-4">
+                <input id="telPhoneNo" type="text" required name="telPhoneNo" class="form-control input-md" placeholder="School Telephone Number"
+                  tmFocus ngModel #telephoneNoRef="ngModel" pattern="[0-9]*">
+                <div *ngIf="telephoneNoRef.errors && (telephoneNoRef.dirty || telephoneNoRef.touched)" class="text-danger">
+                  <div [hidden]="!telephoneNoRef.errors.required"> Telephone Number is required.</div>
+                  <div [hidden]="!mobileNoRef.hasError('pattern')">Telephone Number should be only numbers</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="email">Email</label>
+              <div class="col-md-4">
+                <input id="email" type="text" required name="email" validateEmail class="form-control" placeholder=" School Email" ngModel
+                  #email="ngModel">
+                <div [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Please enter a valid email</div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="address">Address</label>
+              <div class="col-md-4">
+                <textarea id="address" type="text" required name="address" class="form-control" placeholder="School Address" #addressRef="ngModel"
+                  ngModel> </textarea>
+                <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)" class="text-danger">
+                  <div [hidden]="!addressRef.errors.required">Address is required.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="taluka">Taluka</label>
+              <div class="col-md-4">
+                <input id="taluka" type="text" required name="taluka" class="form-control" placeholder="Taluka" #talukaRef="ngModel" ngModel>
+                <div *ngIf="talukaRef.errors && (talukaRef.dirty || talukaRef.touched)" class="text-danger">
+                  <div [hidden]="!talukaRef.errors.required">Taluka is required.</div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="district">District</label>
+              <div class="col-md-4">
+                <input id="district" type="text" required name="district" class="form-control" placeholder="District" #districtRef="ngModel"
+                  ngModel>
+                <div *ngIf="districtRef.errors && (districtRef.dirty || districtRef.touched)" class="text-danger">
+                  <div [hidden]="!districtRef.errors.required">District is required.</div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="state">State</label>
+              <div class="col-md-4">
+                <input id="state" type="text" required name="state" class="form-control" placeholder="State" #stateRef="ngModel" ngModel>
+                <div *ngIf="stateRef.errors && (stateRef.dirty || stateRef.touched)" class="text-danger">
+                  <div [hidden]="!stateRef.errors.required">State is required.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="schoolPincode">Pincode</label>
+              <div class="col-md-4">
+                <input id="Pincode" type="text" required name="Pincode" class="form-control input-md" placeholder="Pincode" tmFocus ngModel
+                  #schoolPincodeRef="ngModel">
+                <div *ngIf="schoolPincodeRef.errors && (schoolPincodeRef.dirty ||schoolPincodeRef.touched)" class="text-danger">
+                  <div [hidden]="!schoolPincodeRef.errors.required">Pincode is required.</div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="submit"></label>
+              <div class="col-md-4">
+                <button type="submit" class="btn btn-warning" [disabled]="school.invalid || isRequesting">Register</button>
+                <!-- <app-spinner [isRunning]="isRequesting"></app-spinner> -->
+              </div>
+            </div>
+
+            <div *ngIf="errors" class="alert alert-danger" role="alert">
+              <strong>Oops!</strong> {{errors}}
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+<app-footer></app-footer>

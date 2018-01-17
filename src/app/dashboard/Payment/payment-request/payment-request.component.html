@@ -1,0 +1,29 @@
+<html>
+  <head></head>
+  <body onload="document.form1.submit()">
+      <form name="form1" method="post" action="https://secure.payu.in/_payment" >
+          <input name="key" type="hidden" value={{publicKey}}>
+          <input name="txnid" type="hidden" value={{txnid}}>
+          <input name="amount" type="hidden" value={{amount}}>
+          <input name="productinfo" type="hidden" value="Lamp">
+          <input name="firstname" type="hidden" value={{firstName}}>
+          <input name="phone" type="hidden" value="9021642472">
+          <input name="email" type="hidden" value={{UserName}}>
+          <!-- <input name="udf1" type="hidden" value={{studentID}}> -->
+          <input name="udf1" type="hidden" value={{UserId}}>
+          <input name="surl" type="hidden" value="http://amardeepwebapi.azurewebsites.net/default/index">
+          <input name="furl" type="hidden" value="http://amardeepwebapi.azurewebsites.net/paymentfailed/index">           
+          <input name="service_provider" type="hidden" value="payu_paisa">
+          <input name="hash" type="hidden" value={{hash}}>
+      </form>
+  </body>
+</html> 
+
+
+    <div class="loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>

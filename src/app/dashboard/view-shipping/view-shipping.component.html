@@ -1,0 +1,40 @@
+<section class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Shipping</h3>  
+          <button type="button" class="btn btn-warning" style="float:right;" routerLink="/dashboard/add-shipping">
+            <i class="fa fa-plus"></i> Add Shipping</button>
+        </div>
+
+        <div class="box-body table-responsive">
+          <table class="table table-bordered">
+            <tbody>
+              <tr style="background-color: rgba(210, 210, 210, 0.8);">
+                <th>Shipping Name</th>
+                <th>Phone Number</th>
+                <th>Email </th>
+                <th>Address</th>                  
+                <th>Date Time</th>
+                <!-- <th>Action</th>                 -->
+              </tr>
+              <tr *ngFor="let shipping of shippings">
+                <td>{{shipping.shippingName}}</td>
+                <td>{{shipping.mobileNo}}</td>
+                <td>{{shipping.email}}</td>
+                <td>{{shipping.address}},{{shipping.taluka}},{{shipping.district}},{{shipping.state}} - {{shipping.pincode}}</td>
+                <td>{{shipping.modifieddate | date:'dd/MM/yyyy, hh:mm:ss'}}</td>  
+                <!-- <td> 
+                  <button class="btn btn-xs btn-default" (click)="Delete(contact.id)">
+                      <i class="fa fa-times"></i>
+                  </button>
+              </td>             -->
+              </tr>              
+            </tbody>
+          </table>
+        </div>   
+      </div>
+    </div>
+  </div>
+</section>    

@@ -1,0 +1,38 @@
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.deps.json
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.runtimeconfig.json
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.runtimeconfig.dev.json
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.dll
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.pdb
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.csprojResolveAssemblyReference.cache
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.AssemblyInfo.cs
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.dll
+D:\Parag\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.pdb
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.deps.json
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.runtimeconfig.json
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.runtimeconfig.dev.json
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.dll
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.pdb
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.AssemblyInfo.cs
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.dll
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.pdb
+E:\Karma Solution inc\Parag\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.csprojResolveAssemblyReference.cache
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.deps.json
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.runtimeconfig.json
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.runtimeconfig.dev.json
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.dll
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.pdb
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.AssemblyInfo.cs
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.dll
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.pdb
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.csproj.CoreCompileInputs.cache
+D:\Projects\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.AssemblyInfoInputs.cache
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.deps.json
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.runtimeconfig.json
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.runtimeconfig.dev.json
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.csprojResolveAssemblyReference.cache
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.dll
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\bin\Debug\netcoreapp1.1\KarmaAmarDeep.pdb
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.csproj.CoreCompileInputs.cache
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.AssemblyInfo.cs
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.dll
+D:\Projects\Amardeep\KarmaAmarDeep\KarmaAmarDeep\obj\Debug\netcoreapp1.1\KarmaAmarDeep.pdb

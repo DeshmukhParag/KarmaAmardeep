@@ -1,0 +1,37 @@
+<section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box">
+          <div class="box-header with-border">
+            <h3 class="box-title">Message</h3>  
+          </div>
+          <div class="box-body table-responsive">
+            <table class="table table-bordered">
+              <tbody>
+                <tr style="background-color: rgba(210, 210, 210, 0.8);">
+                  <th>Name</th>
+                  <th>Phone Number</th>
+                  <th>Email </th>
+                  <th>Message</th>                  
+                  <th>Date Time</th>
+                  <th>Action</th>                
+                </tr>
+                <tr *ngFor="let contact of contacts">
+                  <td>{{contact.name}}</td>
+                  <td>{{contact.mobileNo}}</td>
+                  <td>{{contact.email}}</td>
+                  <td>{{contact.message}}</td>
+                  <td>{{contact.modifieddate | date:'dd/MM/yyyy, hh:mm:ss'}}</td>  
+                  <td> 
+                    <button class="btn btn-xs btn-default" (click)="Delete(contact.id)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </td>            
+                </tr>              
+              </tbody>
+            </table>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </section>

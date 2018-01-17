@@ -1,0 +1,222 @@
+﻿<section class="content-header">
+  <h1> Welcome to Amardeep Portal </h1>
+
+</section>
+
+
+<section class="content">
+  <!-- Small boxes (Stat box) -->
+  <div class="row">
+
+    <div *ngIf="Admin">
+
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+          <div class="inner"> 
+                <h3>{{figures.student}}</h3>             
+            <p>Student</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a routerLink="/dashboard/not-sponsor" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box" style="background-color: #00a65a !important;">
+          <div class="inner">  
+                <h3>{{figures.representative}}</h3>            
+            <p>Representative</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a routerLink="/dashboard/rep-approved" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+          <div class="inner"> 
+             
+           <h3>{{figures.sponsor}}</h3>
+           <!-- <h3>{{figures.sponsor}}</h3> -->
+            <p>Sponsor</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a routerLink="/dashboard/sponsors" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red">
+          <div class="inner">
+              <h3>{{figures.order}}</h3>
+            <!-- <div *ngIf="figures?.length">
+              <h3>{{figures.order}}</h3>
+            </div>
+            <div *ngIf="! figures?.length">
+              <h2>{{currentCount}}</h2>
+            </div> -->
+            <p>Orders</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-pie-graph"></i>
+          </div>
+          <a routerLink="/dashboard/order-view" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <!-- <h1>Admin</h1> -->
+    </div>
+    <div *ngIf="Sponsor">
+
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+          <div class="inner">
+            <h3>{{figures.order}}</h3>
+
+            <p>Donations</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-pie-graph"></i>
+          </div>
+          <a routerLink="/dashboard/sponsor-order-view" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- <h1>Sponsor</h1> -->
+
+
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box" style="background-color: #00a65a !important;">
+          <div class="inner">
+            <h3>{{figures.notSponsoredStudentCount}}
+              <sup style="font-size: 20px"></sup>
+            </h3>
+
+            <p>Shining Star</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a routerLink="/dashboard/shining-stars" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+    </div>
+
+
+    <div *ngIf="Representative">
+
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+          <div class="inner">
+            <h3>{{figures.notSponsoredStudentCount}}</h3>
+            <p>Not Sponsored</p>
+          </div>
+          <div class="icon">
+            <i class="fa fa-child"></i>
+          </div>
+          <a routerLink="/dashboard/rep-not-sponosred" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box" style="background-color: #00a65a !important;">
+          <div class="inner">
+            <h3>{{figures.pendingPaymentStudentCount}}
+              <sup style="font-size: 20px"></sup>
+            </h3>
+
+            <p>Pending Payment</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a routerLink="/dashboard/rep-pending-payment" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+
+
+
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+          <div class="inner">
+            <h3>{{figures.sponsoredStudentCount}}</h3>
+
+            <p>Sponsored</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a routerLink="/dashboard/rep-sponsored" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red">
+          <div class="inner">
+            <h3>{{figures.fulfiledStudentCount}}</h3>
+
+            <p>Fulfiled</p>
+          </div>
+          <div class="icon">
+            <i class="fa fa-check-circle"></i>
+          </div>
+          <a routerLink="/dashboard/rep-fulfiled" class="small-box-footer">More info
+            <i class="fa fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+
+
+
+
+
+      <!-- <h1>Representative</h1> -->
+    </div>
+
+
+  </div>
+  <!-- /.row -->
+</section>

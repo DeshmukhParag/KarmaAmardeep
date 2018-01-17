@@ -1,0 +1,38 @@
+/* <b style="color: #e32;font-size:25px">*</b> */
+
+/* .asteric{
+    color: #e32;
+    font-size: 25px;
+} */
+
+ /* .ng-valid[required], .ng-valid.required  {
+   
+    border:1px solid rgb(24, 163, 24);
+   
+    
+    border-left: 5px solid #42A948; 
+  } */
+
+  /* .ng-invalid:not(form)  {
+    border:1px solid red;
+    border-left: 5px solid #a94442; 
+  }  
+
+   */ 
+
+
+   .asterisk{
+    float: left;
+    height: 50px;
+    padding-right: 8px;
+    padding-top: 4px;
+    position: relative;
+    text-align: right;
+    vertical-align: middle;
+    width: 93px;
+ }
+ .asterisk:After{
+ content:" *" ;
+ color:red    
+ }
+ 

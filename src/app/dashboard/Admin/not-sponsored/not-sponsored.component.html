@@ -1,0 +1,320 @@
+<section class="content">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a routerLink="/dashboard/not-sponsor">Not Sponsored</a>
+                    </li>
+                    <!-- <li>
+                          <a routerLink="/dashboard/pending-payment">Pending Payment</a>
+                      </li> -->
+                    <li>
+                        <a routerLink="/dashboard/sponsored">Sponsored</a>
+                    </li>
+                    <li class="">
+                        <a routerLink="/dashboard/fulfiled">Shipping</a>
+                    </li> 
+                    <li>
+                        <a routerLink="/dashboard/fulfiled">Fulfilled</a>
+                    </li>
+                    <li>
+                        <!-- <button type="button" class="btn btn-warning btn-xs" routerLink="/dashboard/add-student"><i class="fa fa-plus"></i> Add Student</button> -->
+                    </li>
+                </ul>
+                <!-- <h1>{{studentIDObservable}}</h1>
+                  <h1>{{Name}}</h1> -->
+
+                <div class="tab-content">
+                    <form #student="ngForm" novalidate (ngSubmit)="SearchStudent(student)" class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                <input type="text" name="name" class="form-control" placeholder="Student Name" ngModel>
+                            </div>
+                            <div class="col-md-2">
+                                <input id="schoolName" type="text" name="schoolName" class="form-control" placeholder="School Name" ngModel>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text" name="district" class="form-control" placeholder="District" ngModel>
+                            </div>
+                            <div class="col-md-1">
+                                <button type="submit" class="btn btn-warning">Search</button>
+                            </div> 
+                            <div class="col-md-2">
+                                    <button type="button" class="btn btn-warning"  routerLink="/dashboard/student">
+                                <i class="fa fa-plus"></i> Add Student</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="Waiting">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="">
+                                    <div class="box-body table-responsive">                                       
+
+                                        <div *ngIf="students?.length">
+                                            <table class="table table-bordered table-responsive">
+                                                <tbody>
+                                                    <tr style="background-color: rgba(210, 210, 210, 0.8);">
+                                                        <th>Student Name</th>
+                                                        <th>Birthdate</th>
+                                                        <th>School Name</th>
+                                                        <th>District</th>
+                                                        <th>Student Photo </th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    <tr *ngFor="let student of students">
+                                                        <td>{{student.firstName}} {{student.middleName}} {{student.lastName}}
+                                                            </td>
+                                                        <td>{{student.dateOfBirth | date:'dd/MM/yyyy'}}</td>
+                                                        <td>{{student.schoolName}}</td>
+                                                        <td>{{student.district}}</td>
+                                                        <td>
+                                                            <img src="{{path}}{{student.photo}}" height="40" width="40" class="cmtimage"> </td>
+
+                                                        <td>
+                                                            <button class="btn btn-xs btn-default" [routerLink]="['/dashboard/student-edit', student.studentID]">
+                                                                <i class="fa fa-pencil"></i>
+                                                            </button>
+                                                            <button class="btn btn-xs btn-default" data-original-title="Save Row" (click)="studentDetail(student.studentID)" data-toggle="modal"
+                                                                data-target="#modal-default" class="btn btn-default">
+                                                                <i class="fa  fa-list-alt"></i>
+                                                            </button>
+
+                                                            <button class="btn btn-xs btn-default" data-original-title="Save Row" (click)="delete(student.studentID,student.firstName,student.lastName)"
+                                                                data-toggle="modal" data-target="#modal-delete" class="btn btn-default">
+                                                                <i class="fa fa-times"></i>
+                                                            </button>
+
+                                                            <!-- <button class="btn btn-xs btn-default" (click)="delete(student.studentID)"  data-original-title="Cancel" data-toggle="model" data-target="#modal-delete" class="btn btn-default" >
+                                                              <i class="fa fa-times"></i>
+                                                          </button> -->
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <button class="btn btn-warning" (click)="previous()" >Previous</button>  
+
+                                              <b *ngFor="let a of StudentArray; let index = index">
+                 
+                                              <button class="btn btn-warning" (click)="getStudents(index)">{{ index + 1 }} </button>
+                                              </b> 
+                                              <button class="btn btn-warning" (click)="next()">Next</button> 
+                                              </div> 
+                                        <div *ngIf="! students?.length">
+                                            <b>No data Available...</b>
+                                            <button class="btn btn-warning" (click)="previous()" >Previous</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!---- Delete Popup -->
+<div class="modal fade" id="modal-delete">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Are you sure you want to Delete
+                    <b> {{Name}} </b>
+                </h4>
+            </div>
+            <!-- <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                  </div> -->
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal" (click)="deleteStudent()">Yes</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Delete Popup -->
+
+
+<div class="modal fade" id="modal-default">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Student Detail</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <img src="{{path}}{{detail.photo}}" height="200" width="200" class="cmtimage">
+                    </div>
+                </div>
+
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <label class="col-md-6 control-label" for="role-name" style="text-align:left">Full Name : {{detail.firstName}} {{detail.middleName}} {{detail.lastName}}</label>
+                    </div>
+                </div>
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <label class="col-md-6 control-label" for="role-name" style="text-align:left">Gender : {{detail.gender}}</label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <label class="col-md-6 control-label" for="role-name" style="text-align:left"> BirthDate : {{detail.dateOfBirth | date:'dd/MM/yyyy'}}</label>
+                    </div>
+                </div>
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <label class="col-md-6 control-label" for="role-name" style="text-align:left">Parent Mobile No: {{detail.parentMobileNumber}}</label>
+                    </div>
+                </div>
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <label class="col-md-6 control-label" for="role-name" style="text-align:left">Address : {{detail.address}} , {{detail.taluka}} ,{{detail.district}} ,{{detail.state}} -{{detail.pincode}}
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <label class="col-md-6 control-label" for="role-name" style="text-align:left">School: {{detail.schoolName}}</label>
+                    </div>
+                </div>
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <label class="col-md-6 control-label" for="role-name" style="text-align:left">Standard: {{detail.standard}}</label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="text-align:center">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <label class="col-md-6 control-label" for="role-name" style="text-align:left">Modified DateTime: {{detail.modifieddate | date:'dd/MM/yyyy, hh:mm:ss'}}</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!---- Edit Popup -->
+<!-- <div class="modal fade" id="modal-edit">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title">Edit</h4>
+                  </div>
+                  <div class="modal-body">
+  
+                    
+                      <div class="form-group" style="text-align:center">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <img src="{{path}}{{detail.fileName}}" height="200" width="200" class="cmtimage">
+                          </div>
+                      </div>
+  
+                      <div class="form-group" style="text-align:center">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <label class="col-md-6 control-label" for="role-name" style="text-align:left">Full Name : </label>
+                              <input id="first-name" type="text" required name="firstName" class="form-control" placeholder="Student First name" tmFocus
+                                  [(ngModel)]="detail.firstName">
+                          </div>
+                      </div>
+  
+                     
+                      <div class="form-group">
+                          <label class="col-md-4 control-label" for="middle-name">Middle name</label>
+                          <div class="col-md-4">
+                              <input id="middle-name" type="text" required name="middleName" class="form-control" placeholder="Student Middle name" tmFocus
+                                  [(ngModel)]="detail.firstName">
+                          </div>
+                      </div>
+                      <div class="form-group" style="text-align:center">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <label class="col-md-6 control-label" for="role-name" style="text-align:left">Gender : {{detail.gender}}</label>
+                          </div>
+                      </div>
+  
+                      <div class="form-group" style="text-align:center">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <label class="col-md-6 control-label" for="role-name" style="text-align:left"> BirthDate : {{detail.dateOfBirth}}</label>
+                          </div>
+                      </div>
+                      <div class="form-group" style="text-align:center">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <label class="col-md-6 control-label" for="role-name" style="text-align:left">Parent Mobile No: {{detail.parentMobileNumber}}</label>
+                          </div>
+                      </div>
+                      <div class="form-group" style="text-align:center">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <label class="col-md-6 control-label" for="role-name" style="text-align:left">Address : {{detail.address}} , {{detail.taluka}} ,{{detail.city}} ,{{detail.state}} -{{detail.pincode}}
+                              </label>
+                          </div>
+                      </div>
+                      <div class="form-group" style="text-align:center">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <label class="col-md-6 control-label" for="role-name" style="text-align:left">School: {{detail.school}}</label>
+                          </div>
+                      </div>
+                      <div class="form-group" style="text-align:center">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <label class="col-md-6 control-label" for="role-name" style="text-align:left">Standard: {{detail.standard}}</label>
+                          </div>
+                      </div>
+  
+  
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+<!-- End Edit Popup -->

@@ -1,0 +1,46 @@
+﻿<app-account-header></app-account-header>
+		
+		
+<div class="container" style="margin-top:100px;margin-bottom:70px;">
+	<div class="card card-container">
+
+		<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+		<p id="profile-name" class="profile-name-card"></p> 
+
+		<form #f="ngForm" novalidate (ngSubmit)="login(f)" class="form-signin">
+			
+			<div> <input id="email" type="text" required name="email" [ngModel]="credentials.email" #email="ngModel" tmFocus validateEmail class="form-control"
+			placeholder="Email">  
+			<small [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">
+					Please enter a valid email
+			</small>		
+		</div>
+
+			<input id="password" type="password" required name="password" class="form-control"  placeholder="Password" ngModel>
+			<div id="remember" class="checkbox">
+				<label>
+							<input type="checkbox" value="remember-me"> Remember me
+					</label>
+			</div> 
+			<div>
+			   <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" [disabled]="f.invalid || isRequesting">Sign in</button>
+			   <app-spinner [isRunning]="isRequesting"></app-spinner> 
+		   </div> 
+
+		   <div *ngIf="errors" class="alert alert-danger" role="alert">
+				<strong>Oops!</strong> {{errors}}
+			</div>
+
+		</form>
+
+
+		<!-- /form -->
+		<a href="#" class="forgot-password">
+					Forgot the password?
+		</a>
+	</div>
+	<!-- /card-container -->
+</div>
+<!-- /container -->
+
+<app-account-footer></app-account-footer>

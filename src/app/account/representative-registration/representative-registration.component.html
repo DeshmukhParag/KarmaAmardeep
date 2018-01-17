@@ -1,0 +1,266 @@
+<app-account-header></app-account-header>
+
+<div class="container" style="margin-top:150px;margin-bottom:70px">
+    <div class="col-sm-1"></div>
+    <div class="col-lg-10 well">
+        <div class="row">
+            <form #user="ngForm" novalidate (ngSubmit)="registerUser(user)" class="form-horizontal">
+                <fieldset>
+                    <div class="col-md-12">
+                        <legend style="text-align:center">Representative Registration</legend>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="first-name" >First name<b class="asteric">*</b></label>
+                        <!-- <div class="asterisk">Name</div> -->
+                        <div class="col-md-4">
+                            <input id="firstName" type="text" required name="firstName" class="form-control input-md" placeholder="First Name" tmFocus
+                                #firstNameRef="ngModel" ngModel>
+                            <div *ngIf="firstNameRef.errors && (firstNameRef.dirty || firstNameRef.touched)" class="text-danger">
+                                <div [hidden]="!firstNameRef.errors.required"> First Name is required.</div>
+                                <div [hidden]="!firstNameRef.errors.minlength"> Name must be at least 4 characters long</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="middle-name">Middle name</label>
+                        <div class="col-md-4">
+                            <input id="middleName" type="text" required name="middleName" class="form-control" placeholder="Middle Name" tmFocus ngModel
+                                #middleNameRef="ngModel">
+                            <div *ngIf="middleNameRef.errors && (middleNameRef.dirty || middleNameRef.touched)" class="text-danger">
+                                <div [hidden]="!middleNameRef.errors.required"> Middle Name is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="last-name">Last name </label>
+                        <div class="col-md-4">
+                            <input id="lastName" type="text" required name="lastName" class="form-control input-md" placeholder=" Last Name" tmFocus
+                               #lastNameRef="ngModel" ngModel>
+                            <div *ngIf="lastNameRef.errors && (lastNameRef.dirty || lastNameRef.touched)" class="text-danger">
+                                <div [hidden]="!lastNameRef.errors.required"> Last Name is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="gender">Gender</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="gender" value="Male" [checked]='true' ngModel> Male
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="gender" value="Female" ngModel> Female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="birth-date">Birth Date</label>
+                        <div class="col-md-4">
+                            <input id="dateOfBirth" type="date" required name="dateOfBirth" class="form-control" placeholder="Birth Date " tmFocus ngModel
+                                #dateOfBirthRef="ngModel">
+                            <div *ngIf="dateOfBirthRef.errors && (dateOfBirthRef.dirty || dateOfBirthRef.touched)" class="text-danger">
+                                <div [hidden]="!dateOfBirthRef.errors.required">Birth Date is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="mobileNo">Mobile Number</label>
+                      
+                        <div class="col-md-4">
+                            <input id="mobileNo" type="text" required name="mobileNo" class="form-control" placeholder="Mobile Number" tmFocus ngModel
+                                #mobileNoRef="ngModel" pattern="[0-9]*" minlength="10" maxlength="10">
+                            <div *ngIf="mobileNoRef.errors && (mobileNoRef.dirty || mobileNoRef.touched)" class="text-danger">
+                                <div [hidden]="!mobileNoRef.errors.required"> Parent Mobile Number is required.</div>
+                                <div [hidden]="!mobileNoRef.hasError('minlength')">Mobile should be 10digit</div>
+                                <div [hidden]="!mobileNoRef.hasError('pattern')">Mobile Number should be only numbers</div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    
+                    <div class="form-group">
+                            <label class="col-md-4 control-label" for="school-Name">School Name</label>
+                            <div class="col-md-4">
+                                
+                                <select (change)="onSelect($event.target.value)">
+                                    <option value="0">--Select--</option>
+                                    <option *ngFor="let school of schools" value={{school.schoolID}}>{{school.schoolName}}
+                                    </option>
+                                </select>
+                                <a routerLink="/school" class="btn btn-warning" role="button">Register School</a> 
+                                <b>Please Register your School First</b>
+                            </div>
+                        </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="address">Address</label>
+                        <div class="col-md-4">
+                            <textarea id="address" type="text" required name="address" class="form-control" placeholder="Address" ngModel #addressRef="ngModel">
+                                     </textarea>
+                            <div *ngIf="addressRef.errors && (addressRef.dirty || addressRef.touched)" class="text-danger">
+                                <div [hidden]="!addressRef.errors.required">Address is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="taluka">Taluka</label>
+                        <div class="col-md-4">
+                            <input id="taluka" type="text" required name="taluka" class="form-control" placeholder="Taluka" ngModel #talukaRef="ngModel">
+                            <div *ngIf="talukaRef.errors && (talukaRef.dirty || talukaRef.touched)" class="text-danger">
+                                <div [hidden]="!talukaRef.errors.required">Taluka is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="city">District</label>
+                        <div class="col-md-4">
+                            <input id="district" type="text" required name="district" class="form-control" placeholder="District" ngModel #districtRef="ngModel">
+                            <div *ngIf="districtRef.errors && (districtRef.dirty || districtRef.touched)" class="text-danger">
+                                <div [hidden]="!districtRef.errors.required">District is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="state">State</label>
+                        <div class="col-md-4">
+                            <input id="state" type="text" required name="state" class="form-control" placeholder="State" ngModel #stateRef="ngModel">
+                            <div *ngIf="stateRef.errors && (stateRef.dirty || stateRef.touched)" class="text-danger">
+                                <div [hidden]="!stateRef.errors.required">State is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="email">Email</label>
+                        <div class="col-md-4">
+                            <input id="email" type="text" required name="email" validateEmail class="form-control" placeholder="Email" ngModel #email="ngModel">
+                            <div [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Please enter a valid email</div>
+                            <div *ngIf="email.errors && (email.dirty ||email.touched)" class="text-danger">
+										<div [hidden]="!email.errors.required">Email is Required</div>									
+								</div>
+                        </div>
+                    </div> 
+
+                    <!-- <div class="form-group">
+                        <label class="col-md-4 control-label" for="email">Email</label>
+                        <div class="col-md-4">
+                                <input id="email" type="text" required name="email" validateEmail class="form-control" placeholder="Email" ngModel #email="ngModel">
+                                <small [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Please enter a valid email</small>
+                        </div>
+                    </div> -->
+
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="password">Password </label>
+                        <div class="col-md-4">
+                            <input id="password" type="password" required name="password" class="form-control" placeholder="Password" ngModel #password="ngModel">
+                            <div *ngIf="password.errors && (password.dirty ||password.touched)" class="text-danger">
+                                <div [hidden]="!password.errors.required">Password is required</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="designation">Designation</label>
+                        <div class="col-md-4">
+                            <input id="designation" type="text" required name="designation" class="form-control input-md" placeholder="Designation" tmFocus
+                                #designationRef="ngModel" ngModel>
+                            <div *ngIf="designationRef.errors && (designationRef.dirty || designationRef.touched)" class="text-danger">
+                                <div [hidden]="!designationRef.errors.required">Designation is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="schoolTelephoneNumber">Telephone Number </label>
+                        <div class="col-md-4">
+                            <input id="schoolTelephoneNumber" type="text" required name="schoolTelephoneNumber" class="form-control input-md" placeholder="School Telephone Number"
+                                tmFocus ngModel #telephoneNoRef="ngModel" pattern="[0-9]*">
+                            <div *ngIf="telephoneNoRef.errors && (telephoneNoRef.dirty || telephoneNoRef.touched)" class="text-danger">
+                                <div [hidden]="!telephoneNoRef.errors.required"> Telephone Number is required.</div>
+                                <div [hidden]="!mobileNoRef.hasError('pattern')">Telephone Number should be only numbers</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="pincode">Pincode</label>
+                        <div class="col-md-4">
+                            <input id="pincode" type="text" required name="pincode" class="form-control input-md" placeholder="pincode" tmFocus
+                                ngModel #PincodeRef="ngModel">
+                            <div *ngIf="PincodeRef.errors && (PincodeRef.dirty ||PincodeRef.touched)" class="text-danger">
+                                <div [hidden]="!PincodeRef.errors.required">Pincode is required.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                            <label class="col-md-4 control-label" for="representativePhoto">Profile Photo</label>
+                            <div class="col-md-4">
+                                <input type="file" name="representativePhoto" ngModel (change)="getFiles($event)">
+    
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="representativeIdProof">ID Proof</label>
+                            <div class="col-md-4">
+                                <input type="file" name="representativeIdProof" ngModel (change)="getRepresentativeIdProof($event)">
+    
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="employmentProof">Employment Proof</label>
+                            <div class="col-md-4">
+                                <input type="file" name="employmentProof" ngModel (change)="getEmploymentProof($event)">
+                            </div>
+                        </div>
+    
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="submit"></label>
+                        <div class="col-md-4">
+                            <button id="submit" name="submit" class="btn btn-warning" [disabled]="user.invalid || isRequesting">SUBMIT</button>
+                        </div>
+                    </div>
+
+                    <div *ngIf="errors" class="alert alert-danger" role="alert">
+                        <strong>Oops!</strong> {{errors}}
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<app-account-footer></app-account-footer>

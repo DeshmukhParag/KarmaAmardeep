@@ -1,0 +1,94 @@
+
+
+
+<section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box">
+          <div class="box-header with-border">
+            <h3 class="box-title">Schools </h3>
+            
+            <form #school="ngForm" novalidate (ngSubmit)="addSchool(school)" class="form-horizontal">           
+                <div class="form-group">                 
+                  <div class="col-md-2">
+                    <input id="schoolName" type="text" name="schoolName" class="form-control" placeholder="School Name" ngModel>   
+                    <!-- <button type="submit" class="btn btn-warning">Search</button>     -->
+                  </div>
+                  <div class="col-md-2">
+                    <!-- <input id="schoolName" type="text" name="schoolName" class="form-control" placeholder="School Name" ngModel>    -->
+                    <button type="submit" class="btn btn-warning">Search</button>    
+                  </div>
+                </div>
+    
+                <!-- <div class="form-group">
+                  <label class="col-md-4 control-label" for="submit"></label>
+                  <div class="col-md-4">
+                    <button type="submit" class="btn btn-warning">Search</button>                 
+                  </div>
+                </div>     -->
+            </form> 
+
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body table-responsive">
+              <div *ngIf="schools?.length">
+            <table class="table table-bordered ">
+                <thead> 
+                   
+                    <tr>
+                        <th>School Name</th>
+                        <th>Address</th>  
+                        <th>Email</th>
+                        <th>Telephone Number</th>                     
+                        <th>Modified Date</th>
+                        <th>Action</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let school of schools">
+                        <td>{{school.schoolName}}</td>
+                        <td>{{school.address}},{{school.taluka}},{{school.district}},{{school.state}} -{{school.pincode}}</td>                       
+                        <td>{{school.email}}</td>                              
+                         <td>{{school.telPhoneNo}}</td>
+                        <td>{{school.modifieddate | date:'dd/MM/yyyy, hh:mm:ss'}}</td>      
+                        <td> <button class="btn btn-xs btn-default" [routerLink]="['/dashboard/school-edit', school.schoolID]"><i class="fa fa-pencil"></i></button></td>                  
+                      
+                    </tr>
+                </tbody>               
+              </table> 
+
+              <button class="btn btn-warning" (click)="previous()" >Previous</button>  
+
+              <b *ngFor="let a of fakeArray; let index = index">
+                 
+               <button class="btn btn-warning" (click)="getSchools(index)">{{ index + 1 }} </button>
+              </b> 
+              <button class="btn btn-warning" (click)="next()">Next</button> 
+
+        
+
+              <!-- <ul>
+                <li *ngFor="let a of fakeArray; let index = index">
+                  Something {{ index + 1 }} 
+                <button class="btn btn-warning" (click)="getSchools(index)">{{ index + 1 }} </button>
+                </li>
+              </ul> -->
+
+
+              </div>
+              <div *ngIf="! schools?.length">
+               <b>No Data Found</b> <br/>
+               <button class="btn btn-warning" (click)="previous()" >Previous</button>
+          
+              </div>
+
+          </div>
+         
+        </div>
+        <!-- /.box -->
+
+
+</div>
+</div>
+</section>

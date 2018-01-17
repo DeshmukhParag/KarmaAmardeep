@@ -1,0 +1,180 @@
+<!-- <section class="content">    
+  <div class="row">
+      <div class="col-xs-12">
+          <div class="nav-tabs-custom">
+              <ul class="nav nav-tabs">
+                  <li class="">
+                      <a routerLink="/dashboard/not-sponsor">Not Sponsored</a>
+                  </li>
+                  <li class="active">
+                      <a routerLink="/dashboard/pending-payment">Pending Payment</a>
+                  </li>
+                  <li class="">
+                      <a routerLink="/dashboard/sponsored">Sponsored</a>
+                  </li>
+                  <li class="">
+                      <a routerLink="/dashboard/fulfiled">Fulfilled</a>
+                  </li>
+              </ul>
+              <div class="tab-content">                
+                  <div class="tab-pane active" id="Waiting">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="">
+                                 
+                                  <div class="box-body table-responsive">
+                                      <div *ngIf="students?.length">
+                                          <table class="table table-bordered">
+                                              <tbody>
+                                                  <tr style="background-color: rgba(210, 210, 210, 0.8);">
+                                                      <th>Student Name</th>
+                                                      <th>Sponsor Name</th>
+                                                      <th>School</th>
+                                                      <th>Amount</th>  
+                                                      <th>Date</th>
+                                                      <th>Student Photo </th>
+                                                      <th>Action</th>
+                                                  </tr>
+                                                  <tr *ngFor="let student of students ">
+                                                    <td>{{student.firstName}} {{student.middleName}} {{student.lastName}} </td>
+                                                      <td>{{student.sponsorFirstName}} {{student.sponsorLastName}}</td>
+                                                      <td>{{student.schoolName}} , {{student.schoolCity}}</td>
+                                                      <td>{{student.amount}}</td>                                                       
+                                                   
+                                                      <td>{{student.modifieddate | date:'dd/MM/yyyy, hh:mm:ss'}}</td>
+                                                      <td>
+                                                          <img src="{{path}}{{student.fileName}}" height="40" width="40" class="cmtimage"> </td>
+                                                      <td>
+                                                          <button class="btn btn-xs btn-default" data-original-title="Edit Row" onclick="jQuery('#jqgrid').editRow('1');">
+                                                              <i class="fa fa-pencil"></i>
+                                                          </button>
+                                                          <button class="btn btn-xs btn-default" data-original-title="Save Row" (click)="studentDetail(student.studentID)" data-toggle="modal"
+                                                              data-target="#modal-default" class="btn btn-default">
+                                                              <i class="fa  fa-list-alt"></i>
+                                                          </button>
+                                                          <button class="btn btn-xs btn-default" (click)="delete(student.studentID,student.orderID)" data-original-title="Cancel" onclick="jQuery('#jqgrid').restoreRow('1');">
+                                                              <i class="fa fa-times"></i>
+                                                          </button>
+                                                          <input type="button" value="Sponsored" (click)=" updateStatus(student.orderID)" class="btn btn-default" />
+                                                      </td>
+                                                  </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                      <div *ngIf="! students?.length">
+                                          <b>No data Available...</b>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+<div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Student Detail</h4>
+          </div>
+          <div class="modal-body">
+
+
+           
+              <div class="form-group" style="text-align:center">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <img src="{{path}}{{detail.fileName}}" height="150" width="150" class="cmtimage">
+                  </div>
+              </div>
+
+              <div class="form-group" style="text-align:center">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <label class="col-md-6 control-label" for="role-name" style="text-align:left">Full Name : {{detail.firstName}} {{detail.middleName}} {{detail.lastName}}</label>
+                  </div>
+              </div>
+              <div class="form-group" style="text-align:center">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <label class="col-md-6 control-label" for="role-name" style="text-align:left">Gender : {{detail.gender}}</label>
+                  </div>
+              </div>
+
+              <div class="form-group" style="text-align:center">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <label class="col-md-6 control-label" for="role-name" style="text-align:left"> BirthDate : {{detail.dateOfBirth | date:'dd/MM/yyyy'}}</label>
+                  </div>
+              </div>
+              <div class="form-group" style="text-align:center">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <label class="col-md-6 control-label" for="role-name" style="text-align:left">Parent Mobile No: {{detail.parentMobileNumber}}</label>
+                  </div>
+              </div>
+              <div class="form-group" style="text-align:center">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <label class="col-md-6 control-label" for="role-name" style="text-align:left">Address : {{detail.address}} , {{detail.taluka}} ,{{detail.city}} ,{{detail.state}} -{{detail.pincode}}
+                      </label>
+                  </div>
+              </div>
+              <div class="form-group" style="text-align:center">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <label class="col-md-6 control-label" for="role-name" style="text-align:left">School: {{detail.school}}</label>
+                  </div>
+              </div>
+              <div class="form-group" style="text-align:center">
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <label class="col-md-6 control-label" for="role-name" style="text-align:left">Standard: {{detail.standard}}</label>
+                  </div>
+              </div>
+
+
+
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+          </div>
+      </div>
+   
+  </div>
+
+</div>
+
+
+
+
+<div class="modal fade" id="modal-delete">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">Student is Deleted</h4>
+          </div>
+
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+
+          </div>
+      </div>
+
+  </div>
+
+</div> -->

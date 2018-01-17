@@ -1,0 +1,58 @@
+
+<section class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-sm-1"></div>
+        <div class="col-lg-10 well" style="margin-top: 31px;">
+          <form #school="ngForm" novalidate (ngSubmit)="UpdateLamp(school)" class="form-horizontal">
+            <fieldset>
+              <legend style="text-align:center">School Registration </legend>
+  
+  
+              <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                  <input id="id" type="text" required name="id"  class="form-control" [ngModel]="lamp.id" tmFocus>
+                </div>
+              </div>  
+
+              <div class="form-group">
+                  <label class="col-md-4 control-label"></label>
+                  <div class="col-md-4">
+                    <input id="price" type="text" required name="price"  class="form-control" [ngModel]="lamp.price" tmFocus>
+                  </div>
+                </div>  
+  
+            
+  
+            
+  
+          
+         
+  
+        
+             
+  
+  
+  
+              
+  
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="submit"></label>
+                <div class="col-md-4">              
+                  <button type="submit" class="btn btn-warning" >Update</button>
+                </div>
+              </div>
+  
+              <div *ngIf="errors" class="alert alert-danger" role="alert">
+                <strong>Oops!</strong> {{errors}}
+              </div> 
+  
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  </section>

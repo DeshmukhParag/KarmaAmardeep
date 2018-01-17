@@ -1,0 +1,41 @@
+.footer {
+    position: fixed;
+    clear:left;
+    height: 50px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 900;
+    background-color:black; 
+   
+}  
+ .copyright{
+
+color:white;
+ text-align: center;
+margin-top:10px;
+ }
+
+
+
+
+/* .footcontainer{
+
+    background:linear-gradient(#6FACD5) repeat scroll 0% 0% #5E87B0;
+    position:relative;
+    padding:10px;
+    /* border:1px solid #fff; */
+    /* clear: left; */
+    /* width: 100%; */
+
+/* } */  
+/* 
+container{
+    position: fixed;
+    clear:left;
+     height: 50px;
+     bottom: 70px;
+     width: 100%;
+     z-index: 900;
+     background-color: gray;
+ } */
+

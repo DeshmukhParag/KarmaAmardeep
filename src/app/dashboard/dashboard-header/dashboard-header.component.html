@@ -1,0 +1,64 @@
+<nav class="navbar sidebar" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+
+      <!-- <ul *ngIf="roleRepresentative" class="nav navbar-nav">
+      </ul> -->
+
+      <ul *ngIf="roleRepresentatives" class="nav navbar-nav">
+        <li class="active"><a routerLink="/dashboard/student"> <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>&nbsp; Student Registration </a></li>
+        <li><a routerLink="/dashboard/student-list">  <i class="fa fa-eye fa-lg" aria-hidden="true"></i>&nbsp;  View Students</a></li>
+      </ul>
+
+      <ul *ngIf="rolestatus" class="nav navbar-nav">
+        <li><a routerLink="/dashboard/student-view-component">  <i class="fa fa-eye fa-lg" aria-hidden="true"></i>&nbsp;  View Students</a></li>
+        <li class="active"><a routerLink="/dashboard/role"> <i class="fa fa-book" aria-hidden="true"></i>&nbsp; Add Role </a></li>
+        <li><a routerLink="/dashboard/rolesview">  <i class="fa fa-book"></i>&nbsp;  View Roles</a></li>
+        <li><a routerLink="/dashboard/approve">  <i class="fa fa-eye fa-lg" aria-hidden="true"></i> New Representative</a></li>
+        <li><a routerLink="/dashboard/order-view">  <i class="fa fa-eye fa-lg" aria-hidden="true"></i>&nbsp;  View Orders</a></li>
+      </ul>
+
+      <!-- <ul *ngIf="rolesponsor" class="nav navbar-nav">
+      </ul> -->
+
+      <ul *ngIf="roleSponsors" class="nav navbar-nav">
+        <li class="active"><a routerLink="/dashboard/sponsor-order-view"> <i class="fa fa-eye fa-lg" aria-hidden="true"></i>&nbsp; Your Donation </a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!-- <div class="container">   
+  
+    <nav *ngIf ="roleRepresentative">     
+      <a class="btn btn-primary" routerLink="/dashboard/student"> Add Student</a>  
+      <a class="btn btn-info" routerLink="/dashboard/studentdata"> View Students </a>
+      <a class="btn btn-info" routerLink="/dashboard/student-list">Student List </a> 
+    </nav>    
+    <br /> 
+      <br />
+  
+    <nav *ngIf ="rolestatus">
+      <a class="btn btn-danger" routerLink="/dashboard/country">Add countries </a>
+      <a class="btn btn-danger" routerLink="/dashboard/state">Add State</a>     
+      <a class="btn btn-primary" routerLink="/dashboard/role">Add Role</a>    
+      <a class="btn btn-info" routerLink="/dashboard/rolesview">View Role</a> 
+    </nav>  
+  
+    <br /> 
+      <br />
+  
+    <nav *ngIf ="rolesponsor">
+      <a class="btn btn-danger" routerLink="/dashboard/event-activities">Events & Activities</a>
+      <a class="btn btn-danger" routerLink="#">Your Donation</a>          
+    </nav> 
+  
+  </div> -->

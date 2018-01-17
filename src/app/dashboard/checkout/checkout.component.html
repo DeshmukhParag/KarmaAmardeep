@@ -1,0 +1,63 @@
+
+
+
+
+<!-- <div *ngFor="let student of students ">
+
+  <h1>{{student.firstName}} * {{total}}</h1>
+</div>  -->
+
+
+<section class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">CheckOut</h3>  
+          
+        </div>
+        
+        <div class="box-body table-responsive">
+          <table class="table table-bordered">
+            <tbody>
+              <tr style="background-color: rgba(210, 210, 210, 0.8);">
+                <th>Photo</th>
+                <th>Student Name</th>               
+                <th>Address</th>  
+                <th>Amount</th>
+                <th>Action</th>
+              </tr>
+              <tr *ngFor="let student of students">
+                <td>
+                  <img src="{{path}}{{student.photo}}" height="100" width="100" class="cmtimage"> </td>             
+                <td>{{student.firstName}} {{student.middleName}} {{student.lastName}}</td>               
+                <td>{{student.address}},{{student.taluka}},{{student.district}},{{student.state}} - {{student.pincode}}</td>     
+                <td>{{lampPrice}}</td> 
+                <td><i class="fa fa-trash-o" aria-hidden="true" (click)="DeleteStudentFromCart(student.studentID)"></i></td>          
+              </tr>   
+              <tr>
+                <td></td>
+                <td></td>
+                <td> <b>Total Amount</b></td>
+                <td><b> {{total}} Rs.</b> </td>
+                <td>  
+                  <!-- <button class="btn btn-warning" (click)="AddPayment()"></button> -->
+                  <form #studentData="ngForm" novalidate (ngSubmit)="AddPayment(studentData)" >
+                      <input id="total" type="hidden" required name="total"  class="form-control" [ngModel]="total" tmFocus>  
+                    <button type="submit" class="btn btn-warning" >Sponsor Now</button>
+                  </form>
+                 
+                </td>
+              </tr>           
+            </tbody>
+          </table>
+        </div>   
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+
+
+

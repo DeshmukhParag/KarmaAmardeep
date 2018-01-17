@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_NewBackgroundProfile>False</_NewBackgroundProfile>
+    <_PublishTargetUrl>D:\Publication\AmardeepClient10Oct</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="wwwroot/assets/css/animate.css">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/bootstrap.min.css">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/font-awesome.min.css">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/owl.carousel.css">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/owl.theme.css">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/prettyPhoto.css">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/responsive.css">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/css/style.css">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/1.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/22.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/22222.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/33.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/3333.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/44.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/44444.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/Amardeep.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/as.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/back.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/boy-studying-with-solar-LED-light.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/11111.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/22222.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/33333.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/44444.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/cause1.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/cause2.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/cause3.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/cause4.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/IMG_20170812_143248.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/pdwm.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/causes/Soyanta.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/client-1.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/client-2.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/client-3.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/client-4.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/favicon.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/01.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/02.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/03.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/04.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/05.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/06.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/07.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/08.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/IMG_5232.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/IMG_5236.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/IMG_5397.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/IMG_5400 %281%29.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/IMG_5403 %281%29.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/IMG_5450.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/IMG_5456.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/IMG_5463.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/gallery/light2.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/help-banner.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/hoursimpct.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/IMG_5403.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/indbanner.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/lampecpact.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/light2.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/logo.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/oure.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_rounded/btnNext.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_rounded/btnPrevious.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_rounded/contentPattern.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_rounded/loader.gif">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_rounded/sprite.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_square/btnNext.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_square/btnPrevious.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_square/loader.gif">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/dark_square/sprite.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/default/default_thumb.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/default/loader.gif">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/default/sprite.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/default/sprite_next.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/default/sprite_prev.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/default/sprite_x.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/default/sprite_y.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/btnNext.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/btnPrevious.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/contentPatternBottom.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/contentPatternLeft.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/contentPatternRight.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/contentPatternTop.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/default_thumbnail.gif">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/loader.gif">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/facebook/sprite.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/light_rounded/btnNext.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/light_rounded/btnPrevious.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/light_rounded/loader.gif">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/light_rounded/sprite.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/light_square/btnNext.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/light_square/btnPrevious.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/prettyPhoto/light_square/sprite.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/pune.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/representative.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/Shoytan.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/slider/22.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/slider/IMG5403.JPG">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/slider/slide-1.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/slider/slide-2.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/slider/slide-3.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/team/team01.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/team/team02.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/team/team03.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/team/team04.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/testimonial/testimonial1.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/testimonial/testimonial2.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/testimonial/testimonial3.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/testimonial/testimonial4.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/testimonial/testimonial5.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/testimonial/testimonial6.jpg">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/user.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/Visionimg.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/Vision_img.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/images/vvv.png">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/bootstrap.min.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/interact.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/jquery.easing.1.3.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/jquery.inview.min.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/jquery.isotope.min.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/jquery.min.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/jquery.prettyPhoto.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/main.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/modernizr.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/mousescroll.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/owl.carousel.min.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/retina.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/smoothscroll.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/assets/js/wow.min.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/index.html">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/inline.bundle.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/inline.bundle.js.map">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/main.bundle.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/main.bundle.js.map">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/polyfills.bundle.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/polyfills.bundle.js.map">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/styles.bundle.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/styles.bundle.js.map">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/vendor.bundle.js">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+    <File Include="wwwroot/vendor.bundle.js.map">
+      <publishTime>10/11/2017 14:22:50</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

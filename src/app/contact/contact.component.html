@@ -1,0 +1,116 @@
+﻿
+
+
+        <div class="container">
+            <div class="row">
+                <!-- SECTION HEADER -->
+                <div class="fn-section-header">
+                    <h2 class="section-title text-center pseudo_border">Contact Us</h2>
+                    <h4 class="text-center" style="line-height:1.8">If you would like to donate, you can reach us via phone or email.<br /> Otherwise, you please enter your information and we will contact you shortly.<br />Thank you for joining our cause of making every student’s future brighter.</h4>
+                </div>
+                <!-- / END SECTION HEADER -->
+                <div class="col-md-4 centered">
+                    <i class="fa fa-map-marker fa-2x"></i>
+                    <h4>
+                        <a href="https://www.google.co.in/maps/place/Karmasolutionsinc.com/@18.5681691,73.7773026,16.79z/data=!4m8!1m2!2m1!1skarma+solutions+inc+baner+map!3m4!1s0x0:0x4657bd6792d7d082!8m2!3d18.5672903!4d73.7783754">Palshi, Taluka: Khandala,
+                            Satara-412 801
+    
+                            <br>Shirval near PUNE</a>
+                        
+
+                    </h4>
+
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-envelope-o fa-2x"></i>
+                    <h4>                   
+          <a href="mailto:chheda@masterignition.com?Subject=Hello%20again" target="_top">chheda@masterignition.com</a></h4>                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-phone fa-2x"></i>
+                   <h4> <a href="tel:+91-9822050939">+91-9822050939</a> </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 centered">
+                    <form #data="ngForm"  novalidate (ngSubmit) ="add(data); data.resetForm()">
+
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 form-group">
+                                <input class="form-control" id="name" name="name" required placeholder="Name" type="text" ngModel  #nameRef="ngModel" />
+                                <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="text-danger">
+                                        <div [hidden]="!nameRef.errors.required"> Name is required.</div>                                     
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 form-group">
+                                <input class="form-control" id="location" name="location" required  placeholder="Location" type="text" ngModel  #locationRef="ngModel" />
+                                <div *ngIf="locationRef.errors && (locationRef.dirty || locationRef.touched)" class="text-danger">
+                                        <div [hidden]="!locationRef.errors.required"> Location is required.</div>                                     
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6 form-group">
+                                <input class="form-control" id="organization" name="organization"  placeholder="Organization" type="text" ngModel />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 form-group">
+                                <input class="form-control" id="email" name="email" required  placeholder="Email" type="text" ngModel #emailRef="ngModel" />
+                                <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="text-danger">
+                                        <div [hidden]="!emailRef.errors.required"> Email is required.</div>                                     
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6 form-group">
+                                <input class="form-control" id="mobileno" name="mobileno" required  placeholder="Mobile No" type="text" ngModel #mobileNoRef="ngModel" 
+                                pattern="[0-9]*"
+                                minlength="10"
+                                maxlength="10" 
+                                />
+                                <div *ngIf="mobileNoRef.errors && (mobileNoRef.dirty || mobileNoRef.touched)" class="text-danger">
+										<div [hidden]="!mobileNoRef.errors.required"> Parent Mobile Number is required.</div>	
+										<div [hidden]="!mobileNoRef.hasError('minlength')">Mobile should be 10digit</div>	
+										<div [hidden]="!mobileNoRef.hasError('pattern')">Mobile numberr should be only numbers</div>							
+								</div>
+                            </div>
+                        </div>
+
+                       <div>
+                           <textarea class="form-control" id="message" name="message" required  placeholder="Message" rows="3" ngModel #messageRef="ngModel"></textarea>
+                            <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" class="text-danger">
+                            <div [hidden]="!emailRef.errors.required"> Message is required.</div>                                     
+                    </div></div> 
+
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <button class="btn btn btn-lg"  type="submit" data-toggle="modal" data-target="#modal-contact" [disabled]="data.invalid || isRequesting">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contact Pop-up -->
+        <div class="modal fade" id="modal-contact">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Message sent successfully</h4>
+                    </div>    
+                    <div class="modal-footer">
+                        <button type="button" class="" data-dismiss="modal">Close</button>    
+                    </div>
+                </div>    
+            </div>    
+        </div>
+        <!-- END Contact Pop-up -->
+   
+
+ 

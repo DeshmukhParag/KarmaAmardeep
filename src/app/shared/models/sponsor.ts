@@ -1,0 +1,21 @@
+export class Sponsor
+{
+    id:string;
+    firstName:string;
+    lastName:string;
+    companyName:string;
+    address:string;
+    state:string;
+    district:string;
+    taluka:string;
+    pincode:string;
+    mobileNo:string;
+    designation:string;
+    dateOfBirth:string;
+    gender:string;
+    companyRepresenatative:string;
+    email:string;
+    password:string;
+    length:number;
+    modifieddate:Date;   
+}
